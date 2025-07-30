@@ -6,7 +6,6 @@ import pandas as pd
 from scipy.stats import rv_discrete
 import networkx as nx
 
-# Define the power-law distribution
 class power_law(rv_discrete):
     # power_law distribution
     def _pmf(self, x, x_min, x_max, expon):

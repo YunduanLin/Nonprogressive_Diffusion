@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# DIR = 'C:/Users/Maxgroup/Documents/Yunduan/np_diffusion/instances'
 DIR = '../instances'
 
 import numpy as np
@@ -9,6 +10,7 @@ import pandas as pd
 import time
 
 from network import network
+
 
 THRESH = 1e-5
 
@@ -199,8 +201,8 @@ class diffusion_simulation():
             agg_y += y
             agg_prob += prob
 
-        self.df_output['sim_re'] = agg_y / t_iter
-        self.df_output['p_re'] = agg_prob / t_iter
+        self.df_output[f'sim_re'] = agg_y / t_iter
+        self.df_output[f'p_re'] = agg_prob / t_iter
         self.df_output['in_deg'] = self.G.in_degree
         
 
@@ -212,3 +214,4 @@ class diffusion_simulation():
         self.G.df_v.to_csv(self.output_dir + '/v.csv', index=None)
         pd.DataFrame({'sim': [self.t_sim], 'fp': [self.t_fp], 'exact': [self.t_exact]}).to_csv(
             self.output_dir + '/t.csv', index=None)
+
