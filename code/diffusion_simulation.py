@@ -50,10 +50,7 @@ class diffusion_simulation():
         t_start = time.time()
 
         for t in range(self.t_warmup + self.cnt_iter):
-
-            if t % 1000 == 0:
-                print(f'---t={t}---')
-
+            
             y_neighbor = np.array([y[i].sum() for i in in_neighbors])
             
             if self.noise_dist == 'logistic':
