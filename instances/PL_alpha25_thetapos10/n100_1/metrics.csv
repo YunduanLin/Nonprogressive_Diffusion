@@ -1,0 +1,2 @@
+n,d_min,d_max,d_mean,out_in_ratio,deg_corr,inv_ind_density,mape
+100,1.0,33.0,3.66,34.0,0.9917258880595663,0.3754389190673828,0.15246433463132994

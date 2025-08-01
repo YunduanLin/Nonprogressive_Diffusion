@@ -163,7 +163,7 @@ class diffusion_simulation():
         self.mu_star = mu
         self.df_output['fp'] = self.mu_star
 
-    def re_cal(self, seed=[], p=0):
+    def re_cal(self, t_iter, seed=[], p=0):
         mu = self.mu_star
         
         n = self.G.n
@@ -172,7 +172,6 @@ class diffusion_simulation():
 
         agg_y, agg_prob = np.zeros(n), np.zeros(n)
 
-        t_iter = 1000
         for t in range(t_iter):
 
             y = np.random.binomial(size=n, n=1, p=mu)
