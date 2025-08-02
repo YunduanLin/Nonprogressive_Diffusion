@@ -59,11 +59,3 @@ This repository contains code for the paper [Nonprogressive Diffusion on Social 
 
 - Reported runtimes vary by hardware, so when comparing with the paper we recommend focusing on **relative improvements** between methods rather than absolute times.
 
-
-
-
-
-
-
-
-Ask ChatGPT
